@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* General Body and Font Styles */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    /* Or any other professional font */
+    font-weight: 700;
+}
+
+/* --- Navbar Customizations --- */
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: 500;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Optional: Shrink navbar on scroll */
+.navbar.scrolled {
+    background-color: rgba(33, 37, 41, 0.95) !important;
+    /* Slightly more opaque */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: url('https://via.placeholder.com/1920x1080/4682B4/ffffff?text=Your+Hero+Image') no-repeat center center / cover;
+    min-height: 100vh;
+    /* Full viewport height */
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* Vertically center content */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Text shadow for readability */
+}
+
+/* Optional: Overlay for hero image */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-section>.container {
+    position: relative;
+    z-index: 2;
+    /* Ensure content is above overlay */
+}
+
+.hero-section .display-3 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Hero Button Styles */
+.hero-section .btn-primary {
+    background-color: #007bff;
+    /* Bootstrap primary blue */
+    border-color: #007bff;
+    transition: all 0.3s ease;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    /* Pill-shaped buttons */
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.hero-section .btn-outline-light {
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: #fff;
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* --- Section Styling --- */
+section {
+    padding: 80px 0;
+    /* Consistent vertical padding for sections */
+}
+
+section:nth-child(even) {
+    background-color: #f8f9fa;
+    /* Light gray background for alternating sections */
+}
+
+.display-4 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    /* Darker heading color */
+}
+
+/* --- About Section --- */
+.profile-img {
+    width: 300px;
+    /* Fixed width for circular image */
+    height: 300px;
+    /* Fixed height for circular image */
+    object-fit: cover;
+    /* Ensure image covers the area */
+    border: 5px solid #007bff;
+    /* Border around image */
+    box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.2);
+    /* Outer glow effect */
+}
+
+/* --- Skills Section --- */
+.skill-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    /* Remove default card border */
+    border-radius: 10px;
+    overflow: hidden;
+    /* For shadow effect */
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.skill-card .card-body {
+    padding: 2.5rem 1.5rem;
+}
+
+.skill-card i {
+    font-size: 4rem;
+    /* Larger icons */
+    margin-bottom: 1.5rem;
+}
+
+.progress {
+    height: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.progress-bar {
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* --- Portfolio Section --- */
+.portfolio-item {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    height: 250px;
+    /* Consistent image height for all cards */
+    object-fit: cover;
+}
+
+.portfolio-item .card-footer {
+    border-top: 1px solid #eee;
+    /* Light border for footer */
+}
+
+/* --- Contact Section --- */
+#contact .form-control {
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+#contact .btn-primary {
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.social-icons a {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    /* Primary color on hover */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #212529 !important;
+    /* Darker footer */
+    color: #f8f9fa;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767.98px) {
+    .hero-section .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1.2rem;
+    }
+
+    .hero-section .btn-lg {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .skill-card .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+    }
+}
